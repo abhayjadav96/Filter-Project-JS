@@ -123,3 +123,31 @@ function filterdisplay(){
     }
 
 }
+
+// function filtervalue(){
+
+//     let Quantity=document.getElementById("Quantity").value;
+//     console.log(Quantity);    
+
+// }
+
+let filters={
+    Category:null,
+    Quantity:null,
+    minPrice:null,
+    maxPrice:null
+}
+
+function setfilters(property,value){
+
+    if(value!=="")
+    {
+        filters[property]=value;
+    }
+    else{
+
+        filters[property]=null;
+    }
+
+    console.log(filters);
+}
