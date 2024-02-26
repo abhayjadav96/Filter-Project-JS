@@ -132,7 +132,7 @@ function filterdisplay(){
 // }
 
 let filters={
-    Category:null,
+    category:null,
     Quantity:null,
     minPrice:null,
     maxPrice:null
@@ -151,3 +151,48 @@ function setfilters(property,value){
 
     console.log(filters);
 }
+
+function filter(){
+
+    let filteredData=[];
+
+    if(filters.category!==null){
+
+        filteredData=products.filter((product,index)=>{
+            
+            return product.Category===filters.category;
+        })
+    }
+
+    console.log(filteredData);
+
+}
+
+
+// let array=[
+
+//     {name:"Abhay",age:25},
+//     {name:"Khevna",age:25},
+//     {name:"kinjal",age:29},
+//     {name:"krupal",age:25}
+// ];
+
+// let data=array.filter((numb,index)=>{
+
+//     return numb.age===25;
+// })
+
+// console.log(data);
+
+// let data=[];
+
+// for(i=0;i<=array.length;i++)
+// {
+
+//     if(array[i] && array[i].age===25)
+//     {
+//         data.push(array[i]);
+//     }
+// }
+
+// console.log(data);
