@@ -19,7 +19,7 @@
 
             </select>
 
-            <input class="inp" id="Quantity" onchange="setfilters('Quantity',this.value)" placeholder="Enter Quantity">
+            <input class="inp" onchange="setfilters('quantity',this.value)" placeholder="Enter Quantity">
 
             <div class="price_filter">
 
@@ -29,16 +29,16 @@
 
                 <p class="price">
                     <span>0</span>
-                    <input type="range" min="0" max="1000" value="0" onchange="setfilters('minPrice',this.value)" class="inp">
-                    <span>1000</span>
+                    <input type="range" min="0" max="100" value="0" onchange="setfilters('minPrice',this.value)" class="inp">
+                    <span>100</span>
                 </p>
 
                 Select Max Price
 
                 <p class="price">
                     <span>0</span>
-                    <input type="range" min="0" max="1000" value="0" onchange="setfilters('maxPrice',this.value)" class="inp">
-                    <span>1000</span>
+                    <input type="range" id="maxPrice" min="0" max="100" value="0" onchange="setfilters('maxPrice',this.value)" class="inp">
+                    <span>100</span>
                 </p>
 
             </div>
@@ -51,7 +51,7 @@
 
             <div class="header">
                 <h1>All Products</h1>
-                <button class="btn" onclick="setfilters()"> Filters</button>                
+                <button class="btn" onclick="filterdisplay()"> Filters</button>                
             </div>
 
             <table>
